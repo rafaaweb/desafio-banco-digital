@@ -8,16 +8,19 @@ import br.com.dio.model.ContaPoupanca;
 public class Main {
 
     public static void main(String[] args) {
-        Cliente venilton = new Cliente();
-        venilton.setNome("Venilton");
+        Cliente cliente = new Cliente();
+        cliente.setNome("Naruto Uzumaki");
 
-        Conta cc = new ContaCorrente(venilton);
-        Conta poupanca = new ContaPoupanca(venilton);
+        Conta cc = new ContaCorrente(cliente);
+        Conta poupanca = new ContaPoupanca(cliente);
 
-        cc.depositar(100);
+        cc.depositar(250);
         cc.transferir(100, poupanca);
 
+
+        System.out.println("\n");
         cc.imprimirExtrato();
+        System.out.println("\n");
         poupanca.imprimirExtrato();
     }
 
